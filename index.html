@@ -4,9 +4,11 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="initial-scale=0.7, maximum-scale=0.7">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 
@@ -79,12 +81,30 @@ footer a,
   height: 50px;
 }
 
-
 .container10 {
-  width: 980px;
+  width: 71.4%; /* 80% width for all screen sizes by default */
   margin: 0 auto;
 }
 
+/* Media query for mobile devices with a maximum screen width of 768px */
+@media screen and (max-width: 768px) {
+  .container10 {
+    width: 96%; /* Change the width to 90% for mobile devices */
+  }
+}
+
+.articles-list img {
+  width: 100%; /* Set the width to 100% of its parent container's width */
+  height: 200px; /* Set a fixed height for non-mobile devices */
+}
+
+/* Media query for mobile devices with a maximum screen width of 768px */
+@media screen and (max-width: 768px) {
+  .articles-list img {
+	  width: 129px;
+    height: 80px; /* Set height to auto for mobile devices */
+  }
+}
 
 
 .footer-content {
@@ -312,15 +332,22 @@ header a {
   margin-top: 20px;
 }
 
+
 .share-buttons a {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  margin: 5px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 16px;
+  width: 22%; /* Set the width of each link to 25% of the parent container's width */
+  padding: 10px; /* Add padding to provide some spacing between links */
+  font-size: 1em; /* Use relative font size for better responsiveness */
+  text-align: center; /* Center the text inside the links */
+  text-decoration: none; /* Remove underlines from the links */
+  color: #fff; /* Set the color of the link text */
+}
+
+/* Media query for adjusting link size on smaller screens */
+@media screen and (max-width: 768px) {
+  .share-buttons a {
+    width: 40%; /* Change the width to 40% for smaller screens */
+    font-size: 0.6em; /* Decrease font size for smaller screens */
+  }
 }
 
 .share-buttons a i {
@@ -349,12 +376,20 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
+ max-width: 100%; /* Set the maximum width to 100% of its parent container's width */
+  margin: 0 auto;
 }
+
+.image-container img {
+  width: 100%; /* Set the width of the image to 100% of its parent container's width */
+  height: auto; /* Automatically adjust the height while maintaining the aspect ratio */
+}
+
 
 .image-credit {
   position: absolute;
   bottom: 0px;
-  right: 62px;
+  right: 2px;
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 4px 8px;
@@ -476,7 +511,7 @@ header a {
   </div>
 
 <div class="image-container">
-  <img src="https://pbs.twimg.com/media/F1hxp6QXoAAQjHe?format=png&name=900x900" alt="André Onana to Manchester United, Here We Go!" width="815" height="570">
+  <img src="https://pbs.twimg.com/media/F1hxp6QXoAAQjHe?format=png&name=900x900" alt="André Onana to Manchester United, Here We Go!">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div>
 
@@ -511,7 +546,7 @@ The addition of André Onana will elevate Manchester United’s ability to effec
 Onana is undoubtedly one of the best ball-playing goalkeepers in the world, as he showed in the Champions League final. You can also see some of his metrics last season compared against David de Gea. He isn’t restricted in where he can play a pass and is often doing this to a consistently high level, whether Short/Mid/Long.<br><br>
 
 <div class="image-container">
-  <img src="https://pbs.twimg.com/media/F1L_if9XgAE-u9L?format=png&name=900x900" alt="André Onana vs David de Gea stats radar chart data comparison" width="798" height="695">
+  <img src="https://pbs.twimg.com/media/F1L_if9XgAE-u9L?format=png&name=900x900" alt="André Onana vs David de Gea stats radar chart data comparison">
   <a href="https://datamb.football/keepers" target="_blank" class="image-credit">Compare keepers</a>
 
 </div>
@@ -535,13 +570,13 @@ Onana especially excels at playing clipped passes to the fullbacks, where he wil
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1L_Z_NX0AEKNFo?format=jpg&name=medium
-" alt="Onana CL Final clipped pass" width="836" height="460">
+" alt="Onana CL Final clipped pass">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div>
 <br>
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1L_aI9XwAMFRBR?format=jpg&name=medium
-" alt="Onana CL Final clipped pass" width="836" height="460">
+" alt="Onana CL Final clipped pass">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div>
 
@@ -554,7 +589,7 @@ Luke Shaw. 👇
 <br/><br/>
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1h3TkrXoAcqupa?format=png&name=900x900
-" alt="Luke Shaw stats radar chart data comparison" width="798" height="689">
+" alt="Luke Shaw stats radar chart data comparison">
   <a href="https://datamb.football/fullbacks" target="_blank" class="image-credit">Compare fullbacks</a>
 </div>
 
@@ -566,13 +601,13 @@ In possession, Lisandro is one of the best CB's in the world. Technically secure
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1L_a7CX0AInCh5?format=jpg&name=medium
-" alt="Lisandro Martinez skill vs Betis Seville" width="836" height="460">
+" alt="Lisandro Martinez skill vs Betis Seville">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div>
 <br>
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1L_bDRXgAEG1QM?format=jpg&name=medium
-" alt="Lisandro Martinez skill vs Betis Seville" width="836" height="460">
+" alt="Lisandro Martinez skill vs Betis Seville">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div>
 <br><br>
@@ -580,13 +615,13 @@ With Onana, Martinez’s skills on the ball will be shown-off even more. Onana w
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1L_bYuXwAgJ783?format=jpg&name=medium
-" alt="Onana CL Final pass" width="836" height="460">
+" alt="Onana CL Final pass">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div>
 <br>
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1L_bjkXwAIop50?format=jpg&name=medium
-" alt="Onana CL Final pass" width="836" height="460">
+" alt="Onana CL Final pass">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div>
 <br><br>Onana and Martinez are also very accustomed to each other’s game, having played with each other 63 times already. Licha has only played more games with 10 players! We'll no doubt see an even better version of Lisandro Martinez in possession next season.
@@ -594,7 +629,7 @@ With Onana, Martinez’s skills on the ball will be shown-off even more. Onana w
 <br><br>
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1L_dVAWYAE9dp_?format=jpg&name=900x900
-" alt="Onana CL Final sweeping" width="836" height="460">
+" alt="Onana CL Final sweeping">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div><br><br>
 
@@ -603,7 +638,7 @@ Something like this 👇<br><br>
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1L_eSlWcAA3vTm?format=jpg&name=small
-" alt="Potential Man Utd buildup" width="350" height="475">
+" alt="Potential Man Utd buildup">
   <a href="https://twitter.com/stretfordtrends" target="_blank" class="image-credit">@StretfordTrends</a>
 </div><br><br>
 Onana is also a player that you would describe as a "mentality monster". Characters like this are needed in dressing rooms for big games in order to push other players & create a strong dedicated resilient environment.<br><br><span class="entity-embed"><span class="twitter-player"><blockquote class="twitter-tweet" data-conversation="none" data-align="center" data-dnt="true"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">I’ve heard enough, bring me Andre Onana<br><br>- Reporter: “No fear?” (In regards to Erling Haaland)<br>- Onana: “OF HIM?! A man is not afraid of a man. Why would I be afraid?”<br><br>A great keeper with an even better personality. This is EXACTLY the mentality Chelsea need🇨🇲 <a href="https://t.co/qmtMAH8W0M">pic.twitter.com/qmtMAH8W0M</a></p>&mdash; Vᴅʏᴋ (@VdykCFC) <a href="https://twitter.com/VdykCFC/status/1668175632537092096?ref_src=twsrc%5Etfw">June 12, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></blockquote></span></span><br>One weak link in United’s build-up play from the back is Raphael Varane, who struggles in possession, despite being an excellent box defender. <br><br>
@@ -611,7 +646,7 @@ Onana is also a player that you would describe as a "mentality monster". Charact
 There are many excellent options to replace Varane at some stage, something I think will most likely happen next summer.<br><br>
 
 <div class="image-container">
-  <img src="https://pbs.twimg.com/media/F1h8b5EXwAIycEE?format=png&name=900x900" alt="Jean-Clair Todibo vs Ousmane Diomandé stats radar chart data comparison" width="681" height="605">
+  <img src="https://pbs.twimg.com/media/F1h8b5EXwAIycEE?format=png&name=900x900" alt="Jean-Clair Todibo vs Ousmane Diomandé stats radar chart data comparison">
   <a href="https://datamb.football/centrebacks" target="_blank" class="image-credit">Compare CBs</a>
 
 </div><br><br>
@@ -657,18 +692,18 @@ The Moroccan would add even more quality to United's midfield, as rotation for C
   <ul class="articles-list">
     <li>
       <a href="http://datamb.football/stretfordtrends">
-        <img src="https://i.imgur.com/dqt0I5a.png" alt="Articles by Stretford Trends" width="292" height="160">         <span class="article-title">Articles by Stretford Trends</span>
+        <img src="https://i.imgur.com/dqt0I5a.png" alt="Articles by Stretford Trends">         <span class="article-title">Stretford Trends</span>
 
       </a> 
     </li>
     <li>
-      <a href="http://datamb.football/midfielders">
-        <img src="https://i.imgur.com/p43wTxg.png" alt="Compare midfielders" width="292" height="160"><span class="article-title">Compare midfielders</span>
+      <a href="http://datamb.football/keepers">
+        <img src="https://i.imgur.com/p43wTxg.png" alt="Radar chart comparison goalkeepers"><span class="article-title">Compare keepers</span>
       </a>
     </li>
     <li>
       <a href="http://datamb.football/mount-man-united-data-analysis">
-        <img src="https://i.imgur.com/XXtt5nK.png" alt="Mason Mount : Data Analysis" width="270" height="160"><span class="article-title">Mason Mount : Data Analysis</span>
+        <img src="https://i.imgur.com/XXtt5nK.png" alt="Mason Mount : Data Analysis"><span class="article-title">Mason Mount : Data Analysis</span>
       </a>
     </li>
   </ul>
